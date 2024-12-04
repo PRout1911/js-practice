@@ -8,15 +8,25 @@ console.table([name1, mail]); // use to print multiple output in a tabular form
 xyz = '123' //without declaration this is not a good practice
 
 //data types
-let num = "abc" //string
-let a = 1;       //number
-            //null => standalone value
+//Primtive DT 
+let num = "abc" //String => typeof - string
+let a = 1;   //Number => typeof - number
+            //null => standalone value t
             // undefined => value is not assigned
-            // symbol => uniqueness
-            // boolean => true/false
-            // object 
+            // Symbol => uniqueness => typeof - symbol
+            // Boolean => true/false => typeof - boolean
+            // BigInt => typeof - bigint
 console.log(typeof null)// result: object
 console.log(typeof undefined)// the result: undefined
+//Refernece (Non- Primitive dT)
+const myArray = ["abc", "pqr"] // Array => typeof - object
+const myObj = {                 // Object => typeof - object
+    name: "mno",
+    age: 20
+}
+const myFunc = function(){      //Function => typeof - Function Object
+    console.log("hello");
+}
 
 //Conversions
 let pqr = 33
