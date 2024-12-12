@@ -69,3 +69,8 @@ const Objb = [      //array of objects
         age : 20
     }
 ]
+// console.log(Object.keys(tinderUser)); //prints the key of objects 
+// console.log(Object.values(tinderUser));//prints the values of objects
+// console.log(Object.entries(tinderUser));//
+
+// console.log(tinderUser.hasOwnProperty('isLoggedIn'));
