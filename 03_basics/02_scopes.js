@@ -11,7 +11,6 @@ if(true){
     // console.log(b);//30     - local scope
     // console.log(c);//40 : var has issue with scope in js hence var is not recommended
 }
-
 // console.log('Outer: ',c);//40
 
 //scope in function
@@ -25,3 +24,13 @@ function one(){
     two()
 }
 one()
+
+if(true){
+    const username = 'Priyanka'
+    if(username === 'Priyanka'){
+        const surname = ' Rout'
+        console.log(username + surname);
+    }
+    console.log();
+    
+}
