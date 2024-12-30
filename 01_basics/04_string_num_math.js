@@ -2,7 +2,7 @@
 const firstName = "Priyanka"
 const comp = "Comp Sci"
 const age = 21
-console.log(`Hello! My name is ${firstName}. I graduate in ${comp}. I am ${age}yrs old. `);
+console.log(`Hello, My name is ${firstName}. I graduate in ${comp}. I am ${age}yrs old. `);
 
 const str = new String('Limu')
 const trimStr = '   hello'
