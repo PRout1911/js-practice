@@ -11,6 +11,6 @@ let myObj = {
     id: 123
 }
 let myObj1 = myObj
-myObj1.email = "pqr@gmail.com"
+myObj1.email = "abc@gmail.com"
 console.log(myObj.email);
 console.log(myObj1.email);
