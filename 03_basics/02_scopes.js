@@ -39,11 +39,11 @@ console.log(username);//error: same outside the scope
 // Function Declarations and Hoisting
 console.log(myName(5));
 function myName(num){ 
-    return num + 1;   
+    return num + 1   
 }
 
 // Function Expressions and Hoisting
 console.log(Class(6));//Cannot access 'Class' before initialization
 const Class = function (num){
-    return num + 1;
+    return num + 1
 }
