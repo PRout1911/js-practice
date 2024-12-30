@@ -1,4 +1,4 @@
-//date
+//Date
 const myDate = new Date();
 console.log(typeof myDate);//object
 console.log(myDate.toString());//returns current date and time : Tue Dec 10 2024 09:56:00 GMT+0530 (India Standard Time)
@@ -12,7 +12,7 @@ console.log(yourDate.toDateString());//Mon Jan 23 2023
 let yourdate = new Date('01-23-2023')
 console.log(yourdate.toDateString());
 
-//timestamp
+//timestamps
 let myTime = Date.now()
 console.log(myDate.getTime());// returns the number of milliseconds since the Jan 1
 console.log(Math.floor(Date.now()/1000));//returns the time in seconds with a floor value
