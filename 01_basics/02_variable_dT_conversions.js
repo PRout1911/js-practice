@@ -10,7 +10,7 @@ xyz = '123' //without declaration this is not a good practice
 //data types
 //Primtive DT 
 let num = "abc" //String => typeof - string
-let a = 1;   //Number => typeof - number
+let a = 1   //Number => typeof - number
             //null => standalone value t
             // undefined => value is not assigned
             // Symbol => uniqueness => typeof - symbol
