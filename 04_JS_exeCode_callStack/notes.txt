@@ -1,0 +1,66 @@
+1. Javascript Execution Context
+    a. Global Exceution Process: is saved in this - browser value : Window Object
+    b. Function Execution Context: 
+    c. Eval Exceution Context: property of a global object
+
+2. Js runs the program in 2 phases:
+    a. Memory Creation Phase / Creation Phase : space, memory is allocated to the varaibles
+    b. Execution Phase : where all the maths function and all are being executed
+
+sample code:
+    let val1 = 10
+    let val2 = 5
+    function addNum(num1, num2){
+        let total = num1 + num2
+        return total
+    }
+    let result1 = addNum(val1, val2)
+    let result2 = addNum(10, 2)
+
+steps:
+    1. Glabal execution / emvironment : allcates inside 'this'
+    2. Creation / Memory phase : all the varaibles are collected
+        i. val1 -> undefined
+        ii. val2 -> undefined
+        iii. addNum : function is declared and the whole definition is added
+        iv. result1 -> undefined
+        v. result2 -> undefined
+    3. execution Phase 
+        i. val1 - 10
+        ii. val2 - 5
+        iii. nothing for addNum function as it is already defined
+        iv. now when addNum is called ; a new execution context sandbox is created
+            a. new varaible environment + execution thread
+                => Memory Phase : every time funcation is being written this process continues
+                    -> val1 - undefined
+                    -> val2 - undefined
+                    -> total -> undefined
+                
+                => Execution Context
+                    -> num1 - 10
+                    -> num2 - 5
+                    -> total - 15 -> this value is again returned in global execution context
+            *** After all this process the value gets delete as well
+        v. result1 = 15
+        vi. result2 = 15  
+            a. new varaible environment + execution thread
+                => Memory Phase
+                    -> val1 - undefined
+                    -> val2 - undefined
+                    -> total -> undefined
+
+                => Execution Phase
+                    -> num1 - 10
+                    -> num2 - 2
+                    -> total - 12 -> this value is again returned in global execution context
+            *** After all this process the value gets delete as well
+
+Call Stack:
+    -> works on the LIFO (Last in First Out) principle
+    |            |  function One(){
+    |   Three()  |      console.log('One') Two()}
+    |            |  function Two(){
+    |    Two()   |      console.log('Two') Three()}
+    |            |  function Three(){
+    |    One()   |      console.log('Three') }
+    |____________|  => LIFO is used hence three() will be called first, then two() the one()
