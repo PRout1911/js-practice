@@ -13,7 +13,6 @@ while (arr <= myArr.length) {
 }
 
 //do - while
-
 let index = 1
 do {
     console.log(`Value is: ${index}`);
