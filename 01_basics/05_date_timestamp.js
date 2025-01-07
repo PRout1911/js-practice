@@ -21,6 +21,6 @@ let newDate = new Date()
 console.log(newDate.getMonth() + 1);//12
 console.log(newDate.getDay());//2: tuesday
 console.log(
- newDate.toLocaleString('default', {     //helps to more customize the date eg: weekday long means Tuesday in full
+ newDate.toLocaleString('default', {//helps to more customize the date eg: weekday long means Tuesday in full
     weekday: "long",
 }));
