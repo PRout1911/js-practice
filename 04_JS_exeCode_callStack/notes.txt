@@ -18,7 +18,7 @@ sample code:
     let result2 = addNum(10, 2)
 
 steps:
-    1. Glabal execution / emvironment : allcates inside 'this'
+    1. Global execution / emvironment : allocates inside 'this'
     2. Creation / Memory phase : all the varaibles are collected
         i. val1 -> undefined
         ii. val2 -> undefined
@@ -34,7 +34,7 @@ steps:
                 => Memory Phase : every time funcation is being written this process continues
                     -> val1 - undefined
                     -> val2 - undefined
-                    -> total -> undefined
+                    -> total - undefined
                 
                 => Execution Context
                     -> num1 - 10
@@ -47,7 +47,7 @@ steps:
                 => Memory Phase
                     -> val1 - undefined
                     -> val2 - undefined
-                    -> total -> undefined
+                    -> total - undefined
 
                 => Execution Phase
                     -> num1 - 10
