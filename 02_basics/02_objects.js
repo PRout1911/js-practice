@@ -10,26 +10,26 @@ const obj = {
     bool : true,
     "last name" : 'rout'  
 }
-//  console.log(obj.name);
-//  console.log(obj['name']);//another way to access object elements
-//  console.log(obj['last name']);
-//  console.log([mySym]);//to accesss Symbol use it inside [] without ''
+ console.log(obj.name);
+ console.log(obj['name']);//another way to access object elements
+ console.log(obj['last name']);
+ console.log([mySym]);//to accesss Symbol use it inside [] without ''
 
 obj.name = 'Nisha'
-//  console.log(obj);
-// Object.freeze(obj) //this would restrict any chnages made in the object after it is being written
+ console.log(obj);
+Object.freeze(obj) //this would restrict any chnages made in the object after it is being written
 obj.name = 'Riya'
-//  console.log(obj);
+ console.log(obj);
 
 obj.myFunc = function(){ 
     console.log('Hello! i am xyz.');
 }
 obj.myFunc2 = function(){ console.log(`Hello! i am ${this.name}`);
 }
-//  console.log(obj.myFunc());
-//  console.log(obj.myFunc2());
+ console.log(obj.myFunc());
+ console.log(obj.myFunc2());
 
-//const tinderUser = new Object()
+const tinderuser = new Object()
 const tinderUser = {}// other way to declare object
 tinderUser.id = "123abc"
 tinderUser.name = "Sammy"
@@ -69,11 +69,11 @@ const Objb = [      //array of objects
         age : 20
     }
 ]
-//  console.log(Object.keys(tinderUser)); //prints the array of key of objects 
-//  console.log(Object.values(tinderUser));//prints the array of values of objects
-//  console.log(Object.entries(tinderUser));//[ [ 'id', '123abc' ], [ 'name', 'Sammy' ], [ 'isLoggedIn', false ] ] : prints array of array of the objects
+ console.log(Object.keys(tinderUser)); //prints the array of key of objects 
+ console.log(Object.values(tinderUser));//prints the array of values of objects
+ console.log(Object.entries(tinderUser));//[ [ 'id', '123abc' ], [ 'name', 'Sammy' ], [ 'isLoggedIn', false ] ] : prints array of array of the objects
 
-//  console.log(tinderUser.hasOwnProperty('isLoggedIn'));//checks whether the object has any element similar
+ console.log(tinderUser.hasOwnProperty('isLoggedIn'));//checks whether the object has any element similar
 
  //de-structuring
 const subject = {
