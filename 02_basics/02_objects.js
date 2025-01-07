@@ -89,9 +89,9 @@ const {subName : Name} = subject //subject.subName is fine but this is other met
 
 //JSON : javascript object notation : used to transmit data in web app
 {
-    "name" : "priyanka",
-    "age" : 21,
-    "sub" : "science"
+    // "name" : "priyanka",
+    // "age" : 21,
+    // "sub" : "science"
 }
 // or it can written as array 
 [
