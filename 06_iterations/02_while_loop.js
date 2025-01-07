@@ -5,7 +5,7 @@ while (i <= 15) {
     i+=2
 }
 
-let myArr = ['Maths', 'Science', 'Hindi', 'English']
+let myArr = ['Maths', 'Science', 'Hindi', 'English', 'Comp Sci']
 let arr = 0
 while (arr <= myArr.length) {
     console.log(`Value if ${arr} in array is: ${myArr[arr]}`);
