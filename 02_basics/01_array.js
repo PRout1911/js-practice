@@ -34,17 +34,16 @@ console.log(myarr);//[ 'hello', 'bye', 'hii', 'good', [ 'bad', 'excel', 'nice' ]
 myarr.concat(arr1)
 console.log(myarr);//result same as push
 
-// console.log([...myarr, ...arr1]);//spread : ['hello', 'bye', 'hii','good', 'bad', 'excel','nice']
+console.log([...myarr, ...arr1]);//spread : ['hello', 'bye', 'hii','good', 'bad', 'excel','nice']
 
 const newArr = [1,2,3,[4,5],6,7,[0,8,9]]
-// console.log(newArr.flat(Infinity));//creates a new array with all sub-array elements : [1,2,3,4,5,6,7,0,8,9], removes the blank values
+console.log(newArr.flat(Infinity));//creates a new array with all sub-array elements : [1,2,3,4,5,6,7,0,8,9], removes the blank values
 
-console.log(Array.isArray("Hitesh"))//checks whether it's an array or not
-console.log(Array.from("Hitesh"))//converts the string into sub-string array
-console.log(Array.from({name: "hitesh"})) // retuens an object : []
+console.log(Array.isArray("Priyanka"))//checks whether it's an array or not
+console.log(Array.from("Priyanka"))//converts the string into sub-string array
+console.log(Array.from({name: "Priyanka"})) // retuens an object : []
 
 let score1 = 100
 let score2 = 200
 let score3 = 300
 console.log(Array.of(score1, score2, score3));
-
