@@ -3,7 +3,7 @@ const temperature = 19
 if(temperature > 40){
     console.log('Temperature is greater than 40');
 }else{
-    // console.log('Temperature is smaller than 40');
+    console.log('Temperature is smaller than 40');
 }
 
 // (IMPORTANT)
@@ -11,7 +11,7 @@ const score = 200
 if(score > 100){
     var value = 'Hello' // VAR CREATES AMBIGUITY IN SCOPE AS IT TAKES EVERYTHING A GLOBAL SCOPE HENCE DO NOT USE VAR 
 }
-// console.log(`The user is saying ${value}`);
+console.log(`The user is saying ${value}`);
 
 //if-else if-else
 let num = 1000
@@ -22,7 +22,7 @@ if(num < 200){
 }else if(num < 800){
     console.log('less than 800');  
 }else{
-    // console.log('less than 1200');
+    console.log('less than 1200');
 }
 
 //&& (and) , || (or)
