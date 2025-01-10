@@ -26,3 +26,6 @@ for (const [key, values] in map) {
     // console.log(key, '=>', values)//no output
 }
 //Hence, can't use for-in to iterate maps
+
+/*Objects -> for-in
+arrays -> for-of */
