@@ -28,4 +28,4 @@ for (const [key, values] in map) {
 //Hence, can't use for-in to iterate maps
 
 /*Objects -> for-in
-arrays -> for-of */
+arrays -> for-of, foreach */
