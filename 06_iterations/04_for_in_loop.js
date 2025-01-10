@@ -4,7 +4,6 @@ const myObject = {
     game1: 'pubg',
     game2: 'valorant',
     game3: 'free fire',
-    game4: 'among us'
 }
 for (const key in myObject) {
     // console.log(`${key} is for ${myObject[key]}`);
