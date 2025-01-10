@@ -10,7 +10,7 @@ for (const key in myObject) {
 }
 
 //arrays
-const programming = ["js", "rb", "py", "java", "cpp"]
+const programming = ["js", "rb", "py", "java"]
 for (const key in programming) {
     console.log(programming[key]);
 }
