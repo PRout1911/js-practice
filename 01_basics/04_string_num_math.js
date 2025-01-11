@@ -28,7 +28,7 @@ console.log(Math);
 console.log(Math.PI);
 console.log(Math.round(2.63));
 console.log(Math.ceil(3.5));//returns top value
-console.log(Math.floor(3.5));//return lower value
+console.log(Math.floor(3.5));//returns lower value
 console.log(Math.min(1,78,890,0));
 console.log(Math.random());//returns any random value
 console.log((Math.random()*10) + 1);
