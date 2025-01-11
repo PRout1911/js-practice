@@ -20,7 +20,7 @@ myfunc(3, 4)
 function myfunc1(num1, num2){
     let result = num1 + num2
     return result
-    //console.log('hello'); after return function will discard anything
+    //console.log('hello'); //after return function will discard anything
 }
 const result = myfunc1(4, 5)
 console.log("Result: ",result);
