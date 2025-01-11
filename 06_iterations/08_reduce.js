@@ -9,7 +9,7 @@ let myNum = num.reduce( function(accumulator, currentValue) {
 //otherwise its value is array[0]                               otherwise its value is array[1].
     return accumulator + currentValue
 }, 0)
-// |_ this is initial value
+// |_ initial value
 console.log(myNum)
 
 //using arrow function
