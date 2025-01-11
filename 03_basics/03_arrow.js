@@ -39,7 +39,7 @@ const arr = (num1, num2) => { //if curly barces {} are being used then use 'retu
 console.log(arr(4, 6))
 
 //2nd method
-const arrow = (num1, num2) => num1 + num2 // without using return keyword
+const arrow = (num1, num2) => num1 + num2 // without () use return keyword
 console.log(arrow(4, 6))
 //OR
 const arrow1 = (num1, num2) => ( num1 + num2 )// we can use paranthesis as well ()
