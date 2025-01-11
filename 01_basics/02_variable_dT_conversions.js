@@ -18,6 +18,7 @@ let a = 1   //Number => typeof - number
             // BigInt => typeof - bigint
 console.log(typeof null)// result: object
 console.log(typeof undefined)// the result: undefined
+
 //Refernece (Non- Primitive dT)
 const myArray = ["abc", "pqr"] // Array => typeof - object
 const myObj = {                 // Object => typeof - object
