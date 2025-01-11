@@ -35,7 +35,7 @@ tinderUser.id = "123abc"
 tinderUser.name = "Sammy"
 tinderUser.isLoggedIn = false
 
-// console.log(tinderUser);
+console.log(tinderUser);
 
 const objUser = {
     email : 'p@gmail.com',
@@ -47,7 +47,7 @@ const objUser = {
         }
     }
 }
-//  console.log(objUser.userCred.UserName.firstName);//we can access objects of objects 
+ console.log(objUser.userCred.UserName.firstName);//we can access objects of objects 
 
 const obj1 = {1: "a", 2: "b"}
 const obj2 = {3: "a", 4: "b"}
