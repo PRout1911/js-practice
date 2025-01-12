@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+<body>
+    <div class="firstDiv">
+        <h1 class="heading">First Heading</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+</body>
+</html>
+
+//diagram way
+
+                        window
+                           |
+                        Document
+                           |
+                          HTML
+                        /      \
+                    Head          body - attribute
+                  /      \      /      \
+  attribute - title    meta     h1      p
+                |         |     |       |
+            text node     |  text node text node
+                      attribute
+
+//in browser 
+console.log(document)
+console.log(document.list[2])
+console.log(document.getElementById('FirstHeading').innerHTML = "<h1>Priyanka Rout</h1>"
