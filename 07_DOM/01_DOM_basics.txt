@@ -20,9 +20,9 @@
                            |
                           HTML
                         /      \
-                    Head          body - attribute
+                    Head          body -> attribute
                   /      \      /      \
-  attribute - title    meta     h1      p
+  attribute <- title  meta     h1      p
                 |         |     |       |
             text node     |  text node text node
                       attribute
