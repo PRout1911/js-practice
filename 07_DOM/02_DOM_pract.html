@@ -25,17 +25,29 @@
 <!--const title = document.getElementById('title').setAttribute('class', 'test heading') : if you want to name the class both ways-->
 <!--title.style.backgroundColor = 'blue'-->
 <!--title.style.padding = '15px'-->
+
 <!--innerHTML : displays whole thing including html tags-->
 <!--innertext : displays text whatever output is showing-->
 <!--TextContent : displays whole text despite any styling-->
+
 <!--document.querySelector() : find the first element that matches a specified CSS selector. -->
 <!--document.querySelector(#title) : id-->
 <!--document.querySelector(.heading) : class-->
 <!--document.querySelector(h2) : first h2 tag-->
 <!--document.querySelector(input[type = "Password"]) : form-->
-<!--const myul = document.querySelector() --> 
-<!---->
-<!---->
-<!---->
-<!---->
-<!---->
+<!--document.querySelector('p1:first-child')-->
+<!--const myul = document.querySelector('ul') --> 
+<!--myul.style.backgroundColor = 'green'-->
+<!--myul.style.padding = 10px-->
+
+<!--const mySelect = document.querySelectorAll('h1') : returns a NodeList representing a list of elements that match the specified group of selectors.-->
+<!--mySelect[0].style.color = 'green'-->
+<!--mySelect.forEach(function (l){
+    l.style.color = 'green'
+})-->
+
+<!--const myFirstClass = document.getELementsByClassName('li') : A HTMLCollection of found element -->
+<!--const myArr = Array.from(myFirstClass) : converts collection to array-->
+<!--myArr.forEach(function (i){
+    i.style.backgroundColor = 'Orange'
+})-->
