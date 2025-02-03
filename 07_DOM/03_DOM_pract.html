@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom create element</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+    </div>
+</body>
+<script>
+    const par = document.querySelector('.parent')
+    console.log(par);
+    console.log(par.children);//shows sub parts under parent
+    for (let i = 0; i < par.children.length; i++) {
+        console.log(par.children[i].innerHTML);//can access the whole content  
+    }
+    par.children[1].style.color = 'red'
+    console.log(par.firstElementChild);//shows the whole first element along with the tag 
+    console.log(par.lastElementChild);//shows the whole last element along with the tag
+
+    const day1 = document.querySelector('.day')
+    console.log(day1.parentElement)//we can find who's the parent of the child
+    console.log(day1.nextElementSibling)//finds the next element sibling within children
+</script>
+</html>
