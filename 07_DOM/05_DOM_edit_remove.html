@@ -5,7 +5,17 @@
     <meta name="viewport" content="width=S, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    
+<body style="background-color: #212121; color: #fff;">
+    <ul class="lang">
+        <li>Javascript</li>
+    </ul>
 </body>
+<script>
+    function addLang(language){
+        const li = document.createElement('li')
+        li.innerHTML = `${language}`
+        document.querySelector('.lang').appendChild(li)
+    }
+    addLang('Python')
+</script>
 </html>
