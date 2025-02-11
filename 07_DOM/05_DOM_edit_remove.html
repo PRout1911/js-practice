@@ -12,10 +12,18 @@
 </body>
 <script>
     function addLang(language){
-        const li = document.createElement('li')
+        const li = document.createElement('li');
         li.innerHTML = `${language}`
         document.querySelector('.lang').appendChild(li)
-    }
+    }//this method is not optimize as this method allows the child to traverse the whole tree. 
     addLang('Python')
+
+    //optimze way
+    function addOptimizeLang(language){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(language))
+        document.querySelector('.lang').appendChild(li)
+    }
+    addOptimizeLang('Ruby')
 </script>
 </html>
