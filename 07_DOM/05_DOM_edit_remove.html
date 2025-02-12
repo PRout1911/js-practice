@@ -11,19 +11,39 @@
     </ul>
 </body>
 <script>
+    //creating an element 
     function addLang(language){
-        const li = document.createElement('li');
-        li.innerHTML = `${language}`
-        document.querySelector('.lang').appendChild(li)
+        const list = document.createElement('li');
+        list.innerHTML = `${language}`
+        document.querySelector('.lang').appendChild(list)
     }//this method is not optimize as this method allows the child to traverse the whole tree. 
     addLang('Python')
 
     //optimze way
     function addOptimizeLang(language){
-        const li = document.createElement('li');
-        li.appendChild(document.createTextNode(language))
-        document.querySelector('.lang').appendChild(li)
+        const list = document.createElement('li');
+        list.appendChild(document.createTextNode(language))
+        document.querySelector('.lang').appendChild(list)
     }
     addOptimizeLang('Ruby')
+
+    //editig the already existed element
+    const listItem = document.querySelector('li:nth-child(2)')
+    listItem.innerHTML = 'Swift'
+
+    //optimise way
+    const Item = document.querySelector('li:nth-child(3)') 
+    const list = document.createElement('li')
+    list.textContent = 'PHP'
+    Item.replaceWith(list)
+
+    //using outerHTML
+
+    const element = document.querySelector('li:first-child')
+    element.outerHTML = '<li>Rust</li>'
+
+    //remove
+    const fisrtItem = document.querySelector('li:nth-child(2)')
+    fisrtItem.remove()
 </script>
 </html>
