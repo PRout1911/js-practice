@@ -1,7 +1,7 @@
 const form = document.querySelector('form')
 
 form.addEventListener('submit', function(e){
-    e.preventDefault()
+    e.preventDefault()//it prevents the site to get to refresh and avoids sending data to the server automatically
 
     const height = parseInt(document.querySelector('#height').value)
     const weight = parseInt(document.querySelector('#weight').value)
