@@ -21,4 +21,6 @@ if(userCanPlayGame){
     });
 }
 
-function validateTheGuess(guessNum){}
+function validateTheGuess(guessNum){
+    
+}
