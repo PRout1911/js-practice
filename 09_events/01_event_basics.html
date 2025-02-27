@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>htnml Events </title>
+    <title>html Events </title>
 </head>
 <body style="background-color: #414141; color: aliceblue;">
     <h2>Amazing image</h2>
@@ -20,9 +20,99 @@
    </div>
 </body>
 <script>
-    //This is also not that optimized as it may create problems in the future run
+    // This also not that optimized as it may create problems in the future run
+    //Hence use eventListener
     // document.getElementById('owl').onclick = function(){
     //     alert("owl clicked")
     // }
+
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log(e);
+    }, false)//eventPropogation {2 types : event public , event capaturing } this false is default which is event public
+    
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log("clicked inside the ul");
+    }, true)
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log("owl clicked");
+    }, true) 
+    /*results :
+        clicked inside the ul
+        owl clicked
+    */
+
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log("clicked inside the ul");
+    }, false)
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log("owl clicked");
+    }, false)
+    
+    /*results
+        owl clicked
+        clicked inside the ul
+    */
+
+    //This is called bubbling where an event on specific element triggers their event handlers, then bubbles up to its parent element
+    //To prevent this we use stopPropogation function
+
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log("owl clicked");
+        e.stopPropagation()//act like preventDefault which helps in stoping the element to get bubbled
+    }, false)
+
+    document.getElementById('google').addEventListener('click', function(e){
+        console.log("google clicked");
+        e.preventDefault();//prevents the selected element to get act defaultly
+        e.stopPropagation();
+    }, false)
+
+    //activity : when we click any image it should vanish
+    //1st Approach
+    document.getElementById('images').addEventListener('click', function(e){
+        const target = e.target.parentNode;
+        console.log(target);
+        target.remove();
+       // or target.parentNode.removeChild(target);
+    })
+    //in this approach even if we clicked outside the image tag everything removes, as 'ul' gets selected
+
+    //2nd Approach
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+            if(e.target.tagName === 'IMG'){//all the tagnames with name 'IMG' of the target get selected
+            console.log(e.target.id);
+            e.target.parentNode.remove();
+        } 
+    })
+    /*
+    1. type : The type read-only property of the Event interface returns a string containing the event's type. used to refer to the specific event, such as click, load, or error.
+        Eg - function getEventType(event) {
+            const log = document.getElementById("log");
+            log.innerText = `${event.type}\n${log.innerText}`;
+        }
+        document.addEventListener("keydown", getEventType, false);
+
+    2. timestamp : The timeStamp read-only property of the Event interface returns the time (in milliseconds) at which the event was created.
+        Eg  - function getTime(event) {
+            const time = document.getElementById("time");
+            time.firstChild.nodeValue = event.timeStamp;
+        }
+        document.body.addEventListener("keypress", getTime);
+
+    3. preventDefault : 
+    target :
+    toElement :
+    scElement :
+    currentTarget :
+    clientX :
+    clientY :
+    screenX :
+    screenY :
+    altkey :
+    ctrlkey :
+    shiftkey :
+    keyCode : 
+    */
 </script>
 </html>
