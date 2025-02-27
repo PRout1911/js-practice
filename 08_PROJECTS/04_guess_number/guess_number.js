@@ -7,8 +7,6 @@ const chancesleft = document.querySelector('.lastResult')
 const lowOrHi = document.querySelector('.lowOrHi')
 const againStart = document.querySelector('.resultParas')
 
-// let p = document.createElement('p');
-
 let prevGuess = [];
 let numOfGuess = 1;
 
