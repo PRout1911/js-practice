@@ -100,19 +100,65 @@
         }
         document.body.addEventListener("keypress", getTime);
 
-    3. preventDefault : 
-    target :
-    toElement :
-    scElement :
-    currentTarget :
-    clientX :
-    clientY :
-    screenX :
-    screenY :
-    altkey :
-    ctrlkey :
-    shiftkey :
-    keyCode : 
+    3. preventDefault : The preventDefault() method of the Event interface tells the user agent that if the event does not get explicitly handled, its default action should not be taken as it normally would be.
+        Eg - const checkbox = document.querySelector("#id-checkbox");
+            checkbox.addEventListener("click", checkboxClick, false);
+            function checkboxClick(event) {
+            const warn = "preventDefault() won't let you check this!\n";
+            document.getElementById("output-box").innerText += warn;
+            event.preventDefault();
+        }
+
+    4. target : It is a reference to the object onto which the event was dispatched. 
+        Eg - document.getElementById('images').addEventListener('click', function(e){
+            console.log(e.target.tagName);
+            if(e.target.tagName === 'IMG'){//all the tagnames with name 'IMG' of the target get selected
+            console.log(e.target.id);
+            e.target.parentNode.remove();
+        } 
+    })
+
+    5. toElement : It is used to get the element that the pointing device moved to during a mouseover or mouseout event.
+        Eg - element.addEventListener('mouseout', function(event) {
+        var toElement = event.toElement;
+        console.log(toElement);
+    });
+
+    6. scElement : 
+
+    7. currentTarget : It identifies that the element to which the event handler has been attached. This won't be the same for every element.
+        Eg - const constTarget = event.target.getAttribute("id")
+         
+    8. clientX : provides horizontal coordinate within the application's viewport at which the event occured as opposed to the coordinate within the page.
+        Eg - function logkey(e){
+            Client X : `${e.clientX}`
+        }
+    9. clientY : provides vertical coordinate within the application's viewport at which the event occured as opposed to the coordinate within the page.
+        Eg - function logkey(e){
+            Client Y : `${e.clientY}`
+        }
+    10. screenX : read-only was impleted returns the horizontal distance, in CSS pixels, of the top border of the user's browser viewport to the top edge of the screen
+        Eg - function logkey(e){
+            Screen X : `${e.screenY}`
+        }
+    
+    11. screenY : read-only was impleted returns the vertical distance, in CSS pixels, of the top border of the user's browser viewport to the top edge of the screen
+        Eg - function logkey(e){
+            Screen X : `${e.screenY}`
+        }
+    12. altkey :  it shows a boolean value that indicates whenever alt key is pressed (true) and whenever not (false) when the event occured.
+        Eg - function showChar(e) {
+            alert(e.altkey)    
+        }
+    13. ctrlkey : it shows a boolean value that indicates whenever ctrl key is pressed (true) and whenever not (false) when the event occured.
+        Eg - function showChar(e) {
+            alert(e.ctrlkey)    
+        }
+    14. shiftkey : it shows a boolean value that indicates whenever shift key is pressed (true) and whenever not (false) when the event occured.
+        Eg - function showChar(e) {
+            alert(e.shiftkey)    
+        }
+    15. keyCode : represents a system and implementation dependent numerical code identifying the unmodified value of the pressed key.
     */
 </script>
 </html>
