@@ -1,0 +1,48 @@
+//Default Context
+ Javascript -> synchronous language -> one code executes then the other one executes
+            -> single threaded      -> run on the single thread
+
+//Execution Context -> executes the line of code at a time 
+     |-> prints console.log(1)    -
+     |                             |-> each operation waits for the last one to complete before executing
+     |-> prints console.log(2)    -
+     .
+
+//Javascript has 2 type of code :
+            Blocking Code                   Vs                  Non-Blocking Code
+-> Blocks the flow of programs                      -> Doesn't block the flow of execution 
+-> Read file sync                                   -> read the async
+-> Layman Example - if the user asked to            -> Layman Example - without need to wait the user
+    wait for a certain period until the                  could simultaneously work on differnent codes.
+    result comes.
+                
+//how all these work
+
+            JS Engine                               Web API/environment(nodeJs, Dino)
+-------------------------------------           ---------------------------------------
+|  Memory             Call          |           |                                     |
+|  Heap               Stack LIFO    |      call |   DOM API                           |
+|  --------       -------------     |  -------> |   Set timeout    -----------        |
+|  |      |       |           |     | /         |   Set interval             |        |
+|  |      |       |        ___|_____|/          |   fetch()                  |        |
+|  |      |       |    fn /   |     |           |      |                     |        |
+|  |      |       |   fn      |     |           |      |                  Register    |
+|  |      |       |   fn      |     |           |      |                  CALL BACK   |
+|  |      |       |   fn      |     |           |      |                      |       |
+|  |      |       |  Global   |     |           |      |                      |       |
+|  --------       -------------     |           |   Promise                   |       |
+|                   |        |      |           |      |                      |       |
+|                   |        |      |           |      |                      |       |
+-------------------------------------           ---------------------------------------
+                    |        |                          |                     |
+                    |        |                          |                     |
+                    |        |High Priority  --------------------------       |
+                    |        --------------> |   CB  CB               |       |
+                    |                        --------------------------       |
+                    |                    Promise queue / high priority queue  |                             |
+                    |                             FIFO                        |
+                    |                                                         |
+                    |    ----------------------------------------------------------                                                     
+                    ---> |     CB        CB       CB        CB                    |
+                         ----------------------------------------------------------
+                            Task Queue : it makes js fast and asynchronous
