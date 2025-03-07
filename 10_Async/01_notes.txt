@@ -46,3 +46,4 @@
                     ---> |     CB        CB       CB        CB                    |
                          ----------------------------------------------------------
                             Task Queue : it makes js fast and asynchronous
+                            
