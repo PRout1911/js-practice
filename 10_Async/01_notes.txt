@@ -37,7 +37,7 @@
                       |        |                          |                     |
                       |        |                          |                     |
                       |        |High Priority  --------------------------       |
-                      |        --------------> |   CB  CB               |       |
+                      |        --------------> | CB  CB   CB   CB   CB  |       |
                       |                        --------------------------       |
                       |                    Promise queue / high priority queue  |                             |
                       |                             FIFO                        |
