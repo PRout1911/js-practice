@@ -7,13 +7,21 @@
 </head>
 <body>
     <h1>Priyanka Rout</h1>
-    <button id="bid">STOP</button>
+    <button id="bid">START</button>
+    <button id="b_id">STOP</button>
+
 </body>
 <script>
     const set = function(str){
         console.log(str, Date.now())
     }
+    let setInte;
+    document.querySelector('#bid').addEventListener('click', function(){
+        setInte = setInterval(set, 1000, 'hi');
+    });
 
-    setInterval(str, 1000, 'hi')
+    document.querySelector('#b_id').addEventListener('click', function(){
+        clearInterval(setInte);
+    });
 </script>
 </html>
