@@ -19,7 +19,7 @@
     xhr.onreadystatechange = function(){//The readystatechange event is fired whenever the readyState property of the XMLHttpRequest changes.
         console.log(xhr.readyState)
         if(xhr.readyState === 4){//as 4 is the last state change
-            const data = JSON.parse(this.responseText)//API returns the data in 'string' hence we need to convert it to JSON 
+            const data = JSON.parse(this.responseText)//API returns the data in 'string' hence we need to convert it to JSON
             console.log(data.bio);
         }
     }
