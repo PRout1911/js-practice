@@ -15,11 +15,11 @@
 <script>
     const requestURL = 'https://api.github.com/users/PRout1911'
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', requestURL);
+    xhr.open('GET', requestURL);//open() is being called
     xhr.onreadystatechange = function(){//The readystatechange event is fired whenever the readyState property of the XMLHttpRequest changes.
         console.log(xhr.readyState)
-        if(xhr.readyState === 4){
-            const data = JSON.parse(this.responseText)
+        if(xhr.readyState === 4){//as 4 is the last state change
+            const data = JSON.parse(this.responseText)//API returns the data in 'string' hence we need to convert it to JSON 
             console.log(data.bio);
         }
     }
