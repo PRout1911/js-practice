@@ -21,3 +21,15 @@ A Promise is in one of these states:
                                                              |
                                                         error handling
 */
+
+const promiseOne = new Promise(function(resolve, reject){
+  //now we can do all the async tasks
+  setTimeout(function(){
+    console.log('Async tasks completed');
+    resolve();//helps to consume the promise function
+  }, 1000)
+})
+
+promiseOne.then(function(){//then have direct connection with the 'resolve' parameter
+  console.log('promise consumed');//we need to call resolve() in above function to in-order to get this function execute
+})//this function would always execute after the reolve() function is called
