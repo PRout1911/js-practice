@@ -22,6 +22,7 @@ A Promise is in one of these states:
                                                         error handling
 */
 
+//promise 1
 const promiseOne = new Promise(function(resolve, reject){
   //now we can do all the async tasks
   setTimeout(function(){
@@ -32,4 +33,14 @@ const promiseOne = new Promise(function(resolve, reject){
 
 promiseOne.then(function(){//then have direct connection with the 'resolve' parameter
   console.log('promise consumed');//we need to call resolve() in above function to in-order to get this function execute
-})//this function would always execute after the reolve() function is called
+})//this function would always execute after the resolve() function is called
+
+//promise 2 : same above but in a different way
+new Promise(function(resolve, reject){
+  setTimeout(function(){
+    console.log('Async 2 task is completed');
+    resolve();
+  }, 1000)
+}).then(function(){
+  console.log('promise 2 consumed');
+})
