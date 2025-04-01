@@ -40,7 +40,18 @@ new Promise(function(resolve, reject){
   setTimeout(function(){
     console.log('Async 2 task is completed');
     resolve();
-  }, 1000)
+  }, 2000)
 }).then(function(){
   console.log('promise 2 consumed');
+})
+
+//promise 3
+const promiseThree = new Promise(function(resolve, reject){
+  setTimeout(function(){
+    resolve({username: 'priyanka', email: 'priyanka@gmail.com'});//usually object is passed in this function
+  }, 3000)
+})
+
+promiseThree.then(function(value){
+  console.log(value);
 })
