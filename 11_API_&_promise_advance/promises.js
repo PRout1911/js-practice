@@ -31,7 +31,8 @@ const promiseOne = new Promise(function(resolve, reject){
   }, 1000)
 })
 
-promiseOne.then(function(){//then have direct connection with the 'resolve' parameter
+//below is the consuming the Promise process
+promiseOne.then(function(){//'then' have connection with the 'resolve' parameter
   console.log('promise consumed');//we need to call resolve() in above function to in-order to get this function execute
 })//this function would always execute after the resolve() function is called
 
@@ -40,7 +41,7 @@ new Promise(function(resolve, reject){
   setTimeout(function(){
     console.log('Async 2 task is completed');
     resolve();
-  }, 2000)
+  }, 1000)
 }).then(function(){
   console.log('promise 2 consumed');
 })
@@ -49,9 +50,33 @@ new Promise(function(resolve, reject){
 const promiseThree = new Promise(function(resolve, reject){
   setTimeout(function(){
     resolve({username: 'priyanka', email: 'priyanka@gmail.com'});//usually object is passed in this function
-  }, 3000)
+  }, 1000)
 })
 
 promiseThree.then(function(value){
   console.log(value);
 })
+
+//Promise 4
+const promiseFour = new Promise(function(resolve, reject){
+  setTimeout(function(){
+    let error = false
+    if(!error){
+      resolve({username: 'ABC', password: 'abc@123'})
+    }else{
+      reject('ERROR Something went wrong')//'reject' have connection with the 'reject' parameter
+    }
+  }, 1000)
+})
+
+promiseFour
+.then((user) => {
+  console.log(user);
+  return user.password;
+})
+//this below processes where we are using . & . is called chaining...in database it is used the most
+.then((password) => {
+  console.log(password);
+})
+.catch((error) => console.log(error))
+.finally(() => console.log('The error is either rejected or resolved!'))
