@@ -104,6 +104,7 @@ async function consumePromise5(){//async - await directly doesn't handle error h
 consumePromise5()
 
 //fetching value from an api
+//method 1
 async function getUsers(){
   try{
     const response = await fetch('https://jsonplaceholder.typicode.com/users')
@@ -115,3 +116,13 @@ async function getUsers(){
 }
 
 getUsers()
+
+//method 2
+fetch('https://jsonplaceholder.typicode.com/users')
+.then((response) => {
+  return response.json();
+})
+.then((data) => {
+  console.log(data);
+})
+.catch((error) => console.error())
