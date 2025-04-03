@@ -62,7 +62,7 @@ const promiseFour = new Promise(function(resolve, reject){
   setTimeout(function(){
     let error = false
     if(!error){
-      resolve({username: 'ABC', password: 'abc@123'})
+      resolve({username: 'PQR', password: 'pqr@123'})
     }else{
       reject('ERROR Something went wrong')//'reject' have connection with the 'reject' parameter
     }
@@ -80,3 +80,38 @@ promiseFour
 })
 .catch((error) => console.log(error))
 .finally(() => console.log('The error is either rejected or resolved!'))
+
+//Promise 5
+const promiseFive = new Promise(function(resolve, reject){
+  setTimeout(function(){
+    let error = false
+    if(!error){
+      resolve({username: 'ABC', password: 'abc@123'})
+    }else{
+      reject('ERROR ABC went wrong')}
+  }, 2000)
+})
+
+async function consumePromise5(){//async - await directly doesn't handle error hence we are using try, catch
+  try{
+    const reposne = await promiseFive;
+    console.log(reposne);
+  }catch(error){
+    console.log(error);
+  }
+}
+
+consumePromise5()
+
+//fetching value from an api
+async function getUsers(){
+  try{
+    const response = await fetch('https://jsonplaceholder.typicode.com/users')
+    const data = await response.json();//since json as well takes time hence we need to use await
+    console.log(data);
+  }catch(error){
+    console.log(error);
+  }
+}
+
+getUsers()
