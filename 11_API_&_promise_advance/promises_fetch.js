@@ -22,6 +22,27 @@ A Promise is in one of these states:
                                                         error handling
 */
 
+/*
+                                   response =  fetch ('abc')
+                                                  |
+                                ------------------------------------------
+                                |                                        |             
+          -----------------xyz data (array) : __ (initialy empty)   will run either
+          |            **private field we                            Web browser api/ node api
+          |           can't push data in it                               |
+          |                    |                                  either of them provide network request     |Global Memory
+          |      1. OnFulfield[]-promise response-------                   |                                 |
+          |      2. OnRejection[]-promise rejection    |            -------------                            |  response (after getting the required output the network request fires a query where reponse / 
+                                                                                                                      reject have functions which fulfills data then the variable gets avaialable in global memory)
+          |                                 |          | even errors|           |                            |     | 
+          |                                 |          -------------✅-recieve ❌- not recieve              |     |
+          |                                 |                                   |                            |     |
+          |                                 -------------------------------------                            |     |      
+          |                                                                                                  |     |
+          ---------------------------------------------------------------------------------------------------------
+
+*/
+
 //promise 1
 const promiseOne = new Promise(function(resolve, reject){
   //now we can do all the async tasks
